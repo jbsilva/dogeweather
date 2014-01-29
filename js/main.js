@@ -1,4 +1,7 @@
-	   $.getJSON('./weather.php', function(data){
+$(document).ready(function () {
+
+    function get_info(city) {
+       $.getJSON('./weather.php', { "city": city }, function(data){
 
 	   	//$("#degreesCelsius").hide();
 		console.log(data);
@@ -38,4 +41,9 @@
 
 		//initialise such doge
 		$($.doge);
-	});
+	   });
+    };
+
+    get_info("");
+
+});
