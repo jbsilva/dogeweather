@@ -27,7 +27,7 @@
 		var description = data.weather[0].description;
 
 		$('#weather-desc').text("wow " + description);
-		$('#location').text(data.name);
+		$('#location .city').val(data.name);
 
 		$('#degreesCelsius .number').text(Math.round(tempCelcius));
 		$('#degreesCelsius .cel').text("°C ");
