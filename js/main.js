@@ -46,4 +46,9 @@ $(document).ready(function () {
 
     get_info("");
 
+    $("#location").submit(function (e) {
+        e.preventDefault();
+        var city = $('.city', this).val();
+        get_info(city);
+    });
 });
